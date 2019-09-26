@@ -24,7 +24,7 @@ You can begin by going to the code pen link that has the editor you will begin t
 ## Making a sound
 
 ##### Creating the Keys
-To begin you're going to make a list of the keys. We will have 13 keys, black and white.
+To begin you're going to make a list of the keys inside of the `<body>` tag. We will have 13 keys, black and white.
 
 ```html
 <ul class="set">
@@ -44,14 +44,14 @@ To begin you're going to make a list of the keys. We will have 13 keys, black an
 </ul>  
     </ul>
 ```	
-the `data-key` attribute here is a big part of how you will be connecting your keyboard keys to a sound
+The `data-key` attribute here is a big part of how you will be connecting your keyboard keys to a sound
 
 * <a href="https://www.keycode.info">keycode.info </a> will give you data-key values for every letter on the keyboard
 
 
 
 ##### Styling your base
-your probably looking at your application saying "thats not a piano!" Dont worry thats what we're getting to next.
+You're probably looking at your application saying "That's not a piano!" Dont worry thats what we're getting to next.
 
 You can start by adding a new css file to your project `styles.css` and adding the following css.
 
@@ -145,17 +145,17 @@ You can see in CSS that we have used the classes from HTML and placed them as se
 
 ##### Adding Audio to your key
 
-Next you are going to want to add an associating audio sound
+Next you are going to want to add an associating audio sound.
 
 ```html
 <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
 ```
-Notice the same data key value it matches our button we previously created.
+Notice the same data-key value it matches our first key we created.
 
 
 ##### Playing audio on keypress
 
-######Now in order for you to be able to hear anything when that key is pressed youre going to have to add some javascript.
+Now in order for you to be able to hear anything when that key is pressed youre going to have to add some JavaScript.
 
 Under your `<audio>` tag your going to want to start with your `<script>` tag.
 
@@ -179,22 +179,34 @@ Under your `<audio>` tag your going to want to start with your `<script>` tag.
 	* lets the window listen for the even `keydown`
 	* passes associated `keydown` value from event to the `playSound` function thats called.
 	* checks if theres an audio and key with the same data-key value as the keypress that was passed along
-	* adds class `active` to the key so it can undergo css changes
+	* adds class `active` to the key so it can undergo CSS changes
 
 Now we need to add sounds to the other keys. You can choose to add the sound to the correct piano key or add other sound effects.
 For Piano keys:
 C = "http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"
+
 C# = "http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"
+
 D = "http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"
+
 D# = "http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"
+
 E = "http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"
+
 F = "http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"
+
 F# = "http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"
+
 G = "http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"
+
 G# = "http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"
+
 A = "http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"
+
 A# = "http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"
+
 B = "http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"
+
 C = "http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"
 
 For sound effects, use these links:
@@ -207,4 +219,6 @@ We are going to use the classes "black" and "white" to add action.
 
 
 ```CSS
+
+```
 
