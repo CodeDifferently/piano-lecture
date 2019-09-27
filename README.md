@@ -70,6 +70,8 @@ To begin, we are going to create a "containter" using the `<section>` tags to ho
 The `data-key` attribute here is a big part of how you will be connecting your keyboard keys to a sound.
 
 * <a href="https://www.keycode.info">keycode.info </a> will give you data-key values for every letter on the keyboard.
+Look at the third `<div>` tag. The data-key has a value of "65" which connects to the "A" on our keyboard.
+Use that as a guide to connect the other data-key values to other keys on the keyboard
 
 
 
@@ -80,142 +82,131 @@ You're probably looking at your application saying "That's not a piano!" Dont wo
 You can start by adding a new css file to your project `styles.css` and adding the following css.
 
 ```css
-* {
-  box-sizing:border-box;
-}
+html  {
+        background: #000;
+        font-family: 'Noto Serif', serif;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+      }
 
 body {
-  margin:0;
-  background:#222;
+  background-color: #ff8400;
 }
 
- ul {
-  height:18.875em;
-  width:37em;
-  margin:5em auto;
-  padding:3em 0 0 3em;
-  position:relative;
-  border:1px solid #160801;
-  border-radius:1em;
-  background:linear-gradient(to bottom right,rgba(0,0,0,0.3)
-,rgba(0,0,0,0)),url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/187/vwood.png);
-  box-shadow:0 0 50px rgba(0,0,0,0.5) inset,0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5);
-}
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0;
+    }
 
-li {
-  margin:0;
-  padding:0;
-  list-style:none;
-  position:relative;
-  float:left;
-}
+
+    .nowplaying {
+      font-size: 120px;
+      line-height: 1;
+      color: #eee;
+      text-shadow: 0 0 5rem #028ae9;
+      transition: all .07s ease;
+      min-height: 120px;
+    }
+
+    .keys {
+      display: block;
+      width: 100%;
+      height: 350px;
+      max-width: 880px;
+      position: relative;
+      margin: 40px auto 0;
+      cursor: none;
+    }
+
+    .key {
+      position: relative;
+      border: 4px solid black;
+      border-radius: .5rem;
+      transition: all .07s ease;
+      display: block;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+
 
 ```
-This will give you a base for your piano keys. If you look really close, you will see the letters associated with the keys. 
-We will begin to construct the keys next!
+Now we have our title and our keys starting to form! You should see all of the letters of the keyboard going down in a row.
+
+
 
 
 ##### Adding the black and white keys
 
 ```css
-ul .white {
-  height:16em;
-  width:4em;
-  z-index:1;
-  border-left:1px solid #bbb;
-  border-bottom:1px solid #bbb;
-  border-radius:0 0 5px 5px;
-  box-shadow:-1px 0 0 rgba(255,255,255,0.8) inset,0 0 5px #ccc inset,0 0 3px rgba(0,0,0,0.2);
-  background:linear-gradient(to bottom,#eee 0%,#fff 100%);
-}
+.key:not(.sharp) {
+      float: left;
+      width: 10%;
+      height: 100%;
+      background: rgba(255, 255, 255, .8);    
+    }
 
+    .key.sharp {
+      position: absolute;
+      width: 6%;
+      height: 60%;
+      background: #818285;
+      color: #eee;
+      top: 0;
+      z-index: 3;
+    }
 
-.black {
-  height:8em;
-  width:2em;
-  margin:0 0 0 -1em;
-  z-index:2;
-  border:1px solid #000;
-  border-radius:0 0 3px 3px;
-  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -5px 2px 3px rgba(0,0,0,0.6) inset,0 2px 4px rgba(0,0,0,0.5);
-  background:linear-gradient(45deg,#222 0%,#555 100%);
-}
+    .key[data-key="87"] {
+      left: 7%;
+    }
+
+    .key[data-key="69"] {
+      left: 17%;
+    }
+
+    .key[data-key="84"]  {
+      left: 37%;
+    }
+
+    .key[data-key="89"] {
+      left: 47%;
+    }
+
+    .key[data-key="85"] {
+      left: 57%;    
+    }
+
+    .key[data-key="79"] {
+      left: 77%;    
+    }
+
+    .key[data-key="80"] {
+      left: 87%;    
+    }
+
 ```
 
+Now you should be able to see the black and white keys. Next steps will be to add the sounds!
 
-
-Now you should see both black and white keys. Next we need to add more CSS to get them positioned the way we want it.
-
-```css
-.a,.g,.f,.d,.c {
-  margin:0 0 0 -1em;
-}
-
-ul li:first-child {
-  border-radius:5px 0 5px 5px;
-}
-
-ul li:last-child {
-  border-radius:0 5px 5px 5px;
-}
-
-.ds, .as{
-  margin: 0 -2em 0 -1em;
-}
-
-.e, .b  {
-  margin-right: 16.5px;
-}
-
-.e{
-  margin-left: .75px;
-}
-```
-You can see in CSS that we have used the classes from HTML and placed them as selectors.
 
 
 
 ##### Adding Audio to your keys
 
-Next you are going to want to add an associating audio sound.
+Next you are going to want to add an associating audio sound. Under the last `<div>` tag, we will use the `<audio>` tag 
+to give our keys sound! Below is an example of connecting the sound to the "A" key on our keyboard.
 
 ```html
 <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
 ```
-Notice the same data-key value it matches our first key we created in the list.
+Notice the same data-key value it matches our first key we created in the list. We are getting even closer hearing the sound!
 
+Here are links to add sound to your piano. You can choose the traditional piano notes to your keys or add in 
+instrumental sound effects! Click each link to each the sound.
 
-##### Playing audio on keypress
-
-Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript.
-
-Under your `<audio>` tag your going to want to start with your `<script>` tag.
-
-```javascript 
-<script>
- function playSound(e) {
- const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
- const key = document.querySelector(`li[data-key="${e.keyCode}"]`);
-                if (!audio) return;
-
-                key.classList.add('active')
-                audio.currentTime = 0;
-                audio.play();
-            }
- 
-            window.addEventListener('keydown', playSound);
-        </script>
-```
-
-* In short what this does is :
-	* lets the window listen for the even `keydown`
-	* passes associated `keydown` value from event to the `playSound` function thats called.
-	* checks if theres an audio and key with the same data-key value as the keypress that was passed along
-	* adds class `active` to the key so it can undergo CSS changes
-	
-	
-
-Now we need to add sounds to the other keys. You can choose to add the sound to the correct piano key or add other sound effects.
 For Piano keys:
 
 C = "http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"
@@ -288,16 +279,79 @@ For instrumental sound effects, use these links. You can click each link to hear
 
 
 
+##### Playing audio on keypress
+
+Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript. 
+
+
+Under your `<audio>` tag your going to want to start with your `<script>` tag.
+
+```javascript 
+<script>
+const keys = document.querySelectorAll(".key"),
+  note = document.querySelector(".nowplaying"),
+  hints = document.querySelectorAll(".hints");
+
+function playNote(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
+    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+  if (!key) return;
+
+  const keyNote = key.getAttribute("data-note");
+
+  key.classList.add("playing");
+  note.innerHTML = keyNote;
+  audio.currentTime = 0;
+  audio.play();
+}
+window.addEventListener("keydown", playNote);
+</script>
+```
+
+* In short what this does is :
+	* lets the window listen for the even `keydown`
+	* passes associated `keydown` value from event to the `playSound` function thats called.
+	* checks if theres an audio and key with the same data-key value as the keypress that was passed along
+	* adds class `active` to the key so it can undergo CSS changes
+
+
 
 
 ##### Adding "Animation" to your buttons
 OK! We now have sound for each key! Let's add some animation to our piano! When a key is pressed on the keyboard,
-the associated piano key will move simultaneously. So first things first, we're going to go right back to the `styles.css` file.
-We are going to use the classes "black" and "white" to add action.
+the associated piano key will move simultaneously. So first things first, we're going to go right back to the `styles.css` file and add the code below.
 
 
 ```CSS
+.playing {
+      transform: scale(.95);
+      border-color: #028ae9;
+      box-shadow: 0 0 1rem #028ae9;
+    }
 
+    .hints {
+      display: block;
+      width: 100%;
+      opacity: 0;
+      position: absolute;
+      bottom: 7px;
+      transition: opacity .3s ease-out;
+      font-size: 20px;
+    }
+
+    .keys:hover .hints {
+      opacity: 1;
+    }
 ```
+
+
+
+
+
+
+
+
+
 
 
