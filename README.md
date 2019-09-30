@@ -1,15 +1,28 @@
-# Building a Piano/ Synthesizer 
+# Building a Piano / Synthesizer 
 
 
-##### This guide will walk you through the process to create a piano/sythesizer with sound and actionable keys.
+## Project Details
+* **Objective** - To build a piano / synthesizer with sound and actionable keys
+* **Purpose** - To help students establish familiarity with `HTML` (Hypertext Markup Langauge), `CSS` (Cascading Style Sheets), `JS` (JavaScript).
+* **Description** - This guide will walk you through the process to create a piano/sythesizer with sound and actionable keys.
+* **Requirements:**
+	* About 20 minutes
+	* Internet access
+	* A text editor or IDE 
+		* Check out this free online editor, [Codepen.io](https://www.codepen.io)
+		* 
 
 
-### What you will build
 
-You'll build a piano/synthesizer using HTML (Hypertext Markup Langauge), CSS (Cascading Style Sheets), and JS (JavaScript).
 
-First, using HTML will allow you to build a document that can be displayed on a web broswer. Below is an example of the structure
-for creating an HTML document.
+
+
+
+
+## Project Overview
+### Using HTML
+* First, using HTML will allow you to build a document that can be displayed on a web broswer.
+* Below is an example of the structure for creating an HTML document.
 
 ```HTML 
 <!DOCTYPE html>
@@ -22,39 +35,41 @@ for creating an HTML document.
  
 	</body>
 </html>
-
 ```
 
-Secondly, you will use CSS to describe how HTML elements should be displayed. CSS allows you the ability to alter colors, fonts, sizes, 
-and so much more.
 
 
-```css
+### Using CSS
+* Secondly, you will use CSS to describe how HTML elements should be displayed.
+* CSS allows you the ability to alter colors, fonts, sizes, and so much more.
+
+```CSS
 html  {
-        background: #000;
-        font-family: 'Noto Serif', serif;
-        -webkit-font-smoothing: antialiased;
-        text-align: center;
-      }
+	background: #000;
+	font-family: 'Noto Serif', serif;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+}
 
 body {
   background-color: #ff8400;
 }
 
-    h1 {
-      color: #fff;
-      font-size: 50px;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin: 0;
-    }
+h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 0;
+}
 ```
 
 
-Lastly, you will use JavaScript to make your web page dynamic and create responsive elements. For instance, when creating the 
-piano/synthesizer, we want our keys to have action as the keys are the pressed. 
 
+### Using JavaScript
+* Lastly, you will use JavaScript to make your web page dynamic and create responsive elements.
+* For instance, when creating the piano/synthesizer, we want our keys to have action as the keys are the pressed. 
 
 ```JavaScript
 function playNote(e) {
@@ -69,13 +84,6 @@ function playNote(e) {
   audio.play();
 }
 ```
-
-#### What you'll need
-* About 20 minutes
-* Access to the Internet and a search engine
-* A text editor or IDE 
-	* Check out <a href="https://www.codepen.io">codepen.io </a> for a free text editor
-
 
 
 ### Getting Started
@@ -94,55 +102,37 @@ You can begin by going to the code pen link that has the editor you will begin t
 		<title> Piano/Synthesizer </title>
 	</head>
 	<body>
- 
 	</body>
 </html>
-
 ```
 
 
 #### Creating the keys
 We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. The entire  `<body>` tag. 
 
-```html
-<section class="wrap"
+```HTML
+<section class="wrap">
   <h1>Name Your Piano</h1>
     <section id="main">
-       <div class="nowplaying"></div>
-	  <div class="keys">
-	      <div data-key="65" class="key"> <span class="hints">A</span> </div>
-		    
-	      <div data-key="" class="key sharp" > <span class="hints">W</span> </div>
-		    
-	      <div data-key="" class="key" > <span class="hints">S</span> </div>
-		    
-	      <div data-key="" class="key sharp" > <span class="hints">E</span> </div>
-		    
-	      <div data-key="" class="key" > <span class="hints">D</span> </div>
-		    
-		<div data-key="" class="key" > <span class="hints">F</span> </div>
-
-		<div data-key="" class="key sharp" > <span class="hints">T</span> </div>
-
-		<div data-key="" class="key" > <span class="hints">G</span> </div>
-
-		<div data-key="" class="key sharp" > <span class="hints">Y</span> </div>
-
-		<div data-key="" class="key" > <span class="hints">H</span> </div>
-
-		<div data-key="" class="key sharp" > <span class="hints">U</span> </div>
-
-		<div data-key="" class="key" > <span class="hints">J</span> </div>
-
-		<div data-key="" class="key" > <span class="hints">K</span> </div>
-
-		<div data-key="" class="key sharp" > <span class="hints">O</span> </div>
-
-		<div data-key="" class="key" > <span class="hints">L</span> </div>
-		  
-		<div data-key="" class="key sharp" > <span class="hints">P</span> </div>
-		  
-		<div data-key="" class="key" > <span class="hints">;</span> </div>
+      <div class="nowplaying"></div>
+	   <div class="keys">
+        <div data-key="65" class="key"> <span class="hints">A</span> 
+        </div><div data-key="" class="key sharp"> <span class="hints">W</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">S</span> </div>
+        </div><div data-key="" class="key sharp"> <span class="hints">E</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">D</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">F</span> </div>
+        </div><div data-key="" class="key sharp"> <span class="hints">T</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">G</span> </div>
+        </div><div data-key="" class="key sharp"> <span class="hints">Y</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">H</span> </div>
+        </div><div data-key="" class="key sharp"> <span class="hints">U</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">J</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">K</span> </div>
+        </div><div data-key="" class="key sharp"> <span class="hints">O</span> </div>
+        </div><div data-key="" class="key"> <span class="hints">L</span> </div>
+        </div><div data-key="" class="key sharp"> <span class="hints">P</span> </div>
+        <div data-key="" class="key"> <span class="hints">;</span> </div>
       </div>
 </div>
 ```	
@@ -160,112 +150,104 @@ You're probably looking at your application saying "That's not a piano!" Dont wo
 
 You can start by adding a new css file to your project `styles.css` and adding the following css.
 
-```css
+```CSS
 html  {
-        background: #000;
-        font-family: 'Noto Serif', serif;
-        -webkit-font-smoothing: antialiased;
-        text-align: center;
-      }
-
+    background: #000;
+    font-family: 'Noto Serif', serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
 body {
   background-color: #ff8400;
 }
 
-    h1 {
-      color: #fff;
-      font-size: 50px;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin: 0;
-    }
-
-
-    .nowplaying {
-      font-size: 120px;
-      line-height: 1;
-      color: #eee;
-      text-shadow: 0 0 5rem #028ae9;
-      transition: all .07s ease;
-      min-height: 120px;
-    }
-
-    .keys {
-      display: block;
-      width: 100%;
-      height: 350px;
-      max-width: 880px;
-      position: relative;
-      margin: 40px auto 0;
-      cursor: none;
-    }
-
-    .key {
-      position: relative;
-      border: 4px solid black;
-      border-radius: .5rem;
-      transition: all .07s ease;
-      display: block;
-      box-sizing: border-box;
-      z-index: 2;
-    }
-
-
+h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.nowplaying {
+    font-size: 120px;
+    line-height: 1;
+    color: #eee;
+    text-shadow: 0 0 5rem #028ae9;
+    transition: all .07s ease;
+    min-height: 120px;
+}
+.keys {
+    display: block;
+    width: 100%;
+    height: 350px;
+    max-width: 880px;
+    position: relative;
+    margin: 40px auto 0;
+    cursor: none;
+}
+.key {
+    position: relative;
+    border: 4px solid black;
+    border-radius: .5rem;
+    transition: all .07s ease;
+    display: block;
+    box-sizing: border-box;
+    z-index: 2;
+}
 ```
+
 Now we have our title and our keys starting to form! You should see all of the letters of the keyboard going down in a row.
 
 
 
 
 #### Adding the black and white keys
-
-```css
+```CSS
 .key:not(.sharp) {
-      float: left;
-      width: 10%;
-      height: 100%;
-      background: rgba(255, 255, 255, .8);    
-    }
+    float: left;
+    width: 10%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);    
+}
 
-    .key.sharp {
-      position: absolute;
-      width: 6%;
-      height: 60%;
-      background: #818285;
-      color: #eee;
-      top: 0;
-      z-index: 3;
-    }
+.key.sharp {
+    position: absolute;
+    width: 6%;
+    height: 60%;
+    background: #818285;
+    color: #eee;
+    top: 0;
+    z-index: 3;
+}
 
-    .key[data-key="87"] {
-      left: 7%;
-    }
+.key[data-key="87"] {
+    left: 7%;
+}
 
-    .key[data-key="69"] {
-      left: 17%;
-    }
+.key[data-key="69"] {
+    left: 17%;
+}
 
-    .key[data-key="84"]  {
-      left: 37%;
-    }
+.key[data-key="84"]  {
+    left: 37%;
+}
 
-    .key[data-key="89"] {
-      left: 47%;
-    }
+.key[data-key="89"] {
+    left: 47%;
+}
 
-    .key[data-key="85"] {
-      left: 57%;    
-    }
+.key[data-key="85"] {
+    left: 57%;    
+}
 
-    .key[data-key="79"] {
-      left: 77%;    
-    }
+.key[data-key="79"] {
+    left: 77%;    
+}
 
-    .key[data-key="80"] {
-      left: 87%;    
-    }
-
+.key[data-key="80"] {
+    left: 87%;    
+}
 ```
 
 Now you should be able to see the black and white keys. Next steps will be to add the sounds!
@@ -365,7 +347,7 @@ Now in order for you to be able to hear anything when that key is pressed, we ne
 
 Under your `<audio>` tag we are going to start with a `<script>` tag.
 
-```javascript 
+```HTML 
 <script>
 const keys = document.querySelectorAll(".key"),
   note = document.querySelector(".nowplaying"),
@@ -404,33 +386,22 @@ the associated piano key will move simultaneously. So first things first, we're 
 
 ```CSS
 .playing {
-      transform: scale(.95);
-      border-color: #028ae9;
-      box-shadow: 0 0 1rem #028ae9;
-    }
+    transform: scale(.95);
+    border-color: #028ae9;
+    box-shadow: 0 0 1rem #028ae9;
+}
 
-    .hints {
-      display: block;
-      width: 100%;
-      opacity: 0;
-      position: absolute;
-      bottom: 7px;
-      transition: opacity .3s ease-out;
-      font-size: 20px;
-    }
+.hints {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    bottom: 7px;
+    transition: opacity .3s ease-out;
+    font-size: 20px;
+}
 
-    .keys:hover .hints {
-      opacity: 1;
-    }
+.keys:hover .hints {
+    opacity: 1;
+}
 ```
-
-
-
-
-
-
-
-
-
-
-
