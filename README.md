@@ -1,13 +1,88 @@
-Building a Piano/ Synthesizer Lecture
+# Building a Piano/ Synthesizer 
 
 
-##### This guide will walk you through the process to create a piano/sythesizer using HTML, CSS, and JavaScript.
+##### This guide will walk you through the process to create a piano/sythesizer with sound and actionable keys.
+
+
+### What you will build
+
+You'll build a piano/synthesizer using HTML (Hypertext Markup Langauge), CSS (Cascading Style Sheets), and JS (JavaScript).
+
+First, using HTML will allow you to build a document that can be displayed on a web broswer. Below is an example of the structure
+for creating an HTML document.
+
+```HTML 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charaset="UTF-8">
+		<title> Piano/Synthesizer </title>
+	</head>
+	<body>
+ 
+	</body>
+</html>
+
+```
+
+Secondly, you will use CSS to describe how HTML elements should be displayed. CSS allows you the ability to alter colors, fonts, sizes, 
+and so much more.
+
+
+```css
+html  {
+        background: #000;
+        font-family: 'Noto Serif', serif;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+      }
+
+body {
+  background-color: #ff8400;
+}
+
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+```
+
+
+Lastly, you will use JavaScript to make your web page dynamic and create responsive elements. For instance, when creating the 
+piano/synthesizer, we want our keys to have action as the keys are the pressed. 
+
+
+```JavaScript
+function playNote(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
+    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+  if (!key) return;
+
+
+  key.classList.add("playing");
+  audio.currentTime = 0;
+  audio.play();
+}
+```
+
+#### What you'll need
+* About 20 minutes
+* Access to the Internet and a search engine
+* A text editor or IDE 
+	* Check out <a href="https://www.codepen.io">codepen.io </a> for a free text editor
 
 
 
+### Getting Started
 
 
-###### Creating your html file and give it the basic template
+
+#### Creating your html file 
 You can begin by going to the code pen link that has the editor you will begin to work on
 
 
@@ -26,7 +101,7 @@ You can begin by going to the code pen link that has the editor you will begin t
 ```
 
 
-##### Creating the Keys
+#### Creating the keys
 We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. The entire  `<body>` tag. 
 
 ```html
@@ -80,7 +155,7 @@ Use that as a guide to connect the other data-key values to other keys on the ke
 
 
 
-##### Styling your base
+#### Styling your base
 You're probably looking at your application saying "That's not a piano!" Dont worry thats what we're getting to next.
 
 You can start by adding a new css file to your project `styles.css` and adding the following css.
@@ -143,7 +218,7 @@ Now we have our title and our keys starting to form! You should see all of the l
 
 
 
-##### Adding the black and white keys
+#### Adding the black and white keys
 
 ```css
 .key:not(.sharp) {
@@ -198,7 +273,7 @@ Now you should be able to see the black and white keys. Next steps will be to ad
 
 
 
-##### Adding Audio to your keys
+#### Adding audio to your keys
 
 Next, we are going to want to add an associating audio sound to each key on the piano. Under the last `<div>` tag, 
 we will use the `<audio>` tag to give our keys sound! Below is an example of connecting the sound to the "A" key on our keyboard.
@@ -283,7 +358,7 @@ For instrumental sound effects, use these links. You can click each link to hear
 
 
 
-##### Playing audio on keypress
+#### Playing audio on keypress
 
 Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript. 
 
@@ -322,7 +397,7 @@ window.addEventListener("keydown", playNote);
 
 
 
-##### Adding "Animation" to your buttons
+#### Adding "animation" to your buttons
 OK! We now have sound for each key! Let's add some animation to our piano! When a key is pressed on the keyboard,
 the associated piano key will move simultaneously. So first things first, we're going to go right back to the `styles.css` file and add the code below.
 
