@@ -1,7 +1,11 @@
+Building a Piano/ Synthesizer Lecture
 
-Synthesizer Lecture
-## Getting Started
-Log into your CodePen account 
+
+##### This guide will walk you through the process to create a piano/sythesizer using HTML, CSS, and JavaScript.
+
+
+
+
 
 ###### Creating your html file and give it the basic template
 You can begin by going to the code pen link that has the editor you will begin to work on
@@ -23,7 +27,7 @@ You can begin by going to the code pen link that has the editor you will begin t
 
 
 ##### Creating the Keys
-To begin, we are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag will give us a place to title your piano. The `<span>` tag will allow us to  `<body>` tag. 
+We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. The entire  `<body>` tag. 
 
 ```html
 <section class="wrap"
@@ -196,8 +200,8 @@ Now you should be able to see the black and white keys. Next steps will be to ad
 
 ##### Adding Audio to your keys
 
-Next you are going to want to add an associating audio sound. Under the last `<div>` tag, we will use the `<audio>` tag 
-to give our keys sound! Below is an example of connecting the sound to the "A" key on our keyboard.
+Next, we are going to want to add an associating audio sound to each key on the piano. Under the last `<div>` tag, 
+we will use the `<audio>` tag to give our keys sound! Below is an example of connecting the sound to the "A" key on our keyboard.
 
 ```html
 <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
@@ -207,7 +211,7 @@ Notice the same data-key value it matches our first key we created in the list. 
 Here are links to add sound to your piano. You can choose the traditional piano notes to your keys or add in 
 instrumental sound effects! Click each link to each the sound.
 
-For Piano keys:
+For Piano keys in order from left to right:
 
 C = "http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"
 
@@ -284,7 +288,7 @@ For instrumental sound effects, use these links. You can click each link to hear
 Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript. 
 
 
-Under your `<audio>` tag your going to want to start with your `<script>` tag.
+Under your `<audio>` tag we are going to start with a `<script>` tag.
 
 ```javascript 
 <script>
