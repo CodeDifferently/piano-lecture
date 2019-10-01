@@ -68,7 +68,7 @@ h1 {
 
 
 ### Using JavaScript
-* Lastly, you will use `JavaScrip`t to make your web page dynamic and create responsive elements.
+* Lastly, you will use `JavaScript` to make your web page dynamic and create responsive elements.
 * For instance, when creating the piano/synthesizer, we want our keys to have action as the keys are the pressed. 
 
 ```JavaScript
@@ -91,7 +91,8 @@ function playNote(e) {
 
 
 #### Creating your html file 
-You can begin by going to the code pen link that has the editor you will begin to work on
+We will begin by copying and pasting this into the `HTML` section on CodePen. Everything that will appear on the 
+web page is contained by the `<body>` tag.
 
 
 ```html 
@@ -110,7 +111,7 @@ You can begin by going to the code pen link that has the editor you will begin t
 #### Creating the keys
 We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag
 will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. 
-Everything that is to appear on the web page is wrapped by the `<body>` tag. 
+ 
 
 
 ```HTML
@@ -118,32 +119,32 @@ Everything that is to appear on the web page is wrapped by the `<body>` tag.
   <h1>Name Your Piano</h1>
     <section id="main">
       <div class="nowplaying"></div>
-	   <div class="keys">
-        <div data-key="65" class="key"> <span class="hints">A</span> </div>
-        </div><div data-key="" class="key sharp"> <span class="hints">W</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">S</span> </div>
-        </div><div data-key="" class="key sharp"> <span class="hints">E</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">D</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">F</span> </div>
-        </div><div data-key="" class="key sharp"> <span class="hints">T</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">G</span> </div>
-        </div><div data-key="" class="key sharp"> <span class="hints">Y</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">H</span> </div>
-        </div><div data-key="" class="key sharp"> <span class="hints">U</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">J</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">K</span> </div>
-        </div><div data-key="" class="key sharp"> <span class="hints">O</span> </div>
-        </div><div data-key="" class="key"> <span class="hints">L</span> </div>
-        </div><div data-key="" class="key sharp"> <span class="hints">P</span> </div>
-        <div data-key="" class="key"> <span class="hints">;</span> </div>
-      </div>
+	  <div class="keys">
+     <div data-key="65" class="key"> <span class="hints">A</span> </div>
+     <div data-key="" class="key sharp"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key sharp"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key sharp"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key sharp"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key sharp"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key sharp"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+     <div data-key="" class="key sharp"> <span class="hints"> </span> </div>
+     <div data-key="" class="key"> <span class="hints"> </span> </div>
+   </div>
 </div>
 ```	
 The `data-key` attribute here is a big part of how you will be connecting your keyboard keys to a sound.
 
 * <a href="https://www.keycode.info">keycode.info </a> will give you data-key values for every letter on the keyboard.
 Look at the third `<div>` tag. The data-key has a value of "65" which connects to the "A" on our keyboard.
-Use that as a guide to connect the other data-key values to other keys on the keyboard
+Use that as a guide to connect the other data-key values to other keys on the keyboard.
 
 
 
