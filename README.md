@@ -21,7 +21,7 @@
 
 ## Project Overview
 ### Using HTML
-* First, using HTML will allow you to build a document that can be displayed on a web broswer.
+* First, using `HTML` will allow you to build a document that can be displayed on a web broswer.
 * Below is an example of the structure for creating an HTML document.
 
 ```HTML 
@@ -40,8 +40,8 @@
 
 
 ### Using CSS
-* Secondly, you will use CSS to describe how HTML elements should be displayed.
-* CSS allows you the ability to alter colors, fonts, sizes, and so much more.
+* Secondly, you will use `CSS` to describe how HTML elements should be displayed.
+* `CSS` allows you the ability to alter colors, fonts, sizes, and so much more.
 
 ```CSS
 html  {
@@ -68,7 +68,7 @@ h1 {
 
 
 ### Using JavaScript
-* Lastly, you will use JavaScript to make your web page dynamic and create responsive elements.
+* Lastly, you will use `JavaScrip`t to make your web page dynamic and create responsive elements.
 * For instance, when creating the piano/synthesizer, we want our keys to have action as the keys are the pressed. 
 
 ```JavaScript
@@ -108,7 +108,10 @@ You can begin by going to the code pen link that has the editor you will begin t
 
 
 #### Creating the keys
-We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. The entire  `<body>` tag. 
+We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag
+will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. 
+Everything that is to appear on the web page is wrapped by the `<body>` tag. 
+
 
 ```HTML
 <section class="wrap">
@@ -116,7 +119,7 @@ We are going to create a "containter" using the `<section>` tags to hold our `<d
     <section id="main">
       <div class="nowplaying"></div>
 	   <div class="keys">
-        <div data-key="65" class="key"> <span class="hints">A</span> 
+        <div data-key="65" class="key"> <span class="hints">A</span> </div>
         </div><div data-key="" class="key sharp"> <span class="hints">W</span> </div>
         </div><div data-key="" class="key"> <span class="hints">S</span> </div>
         </div><div data-key="" class="key sharp"> <span class="hints">E</span> </div>
@@ -148,7 +151,7 @@ Use that as a guide to connect the other data-key values to other keys on the ke
 #### Styling your base
 You're probably looking at your application saying "That's not a piano!" Dont worry thats what we're getting to next.
 
-You can start by adding a new css file to your project `styles.css` and adding the following css.
+You can start by adding a new css file to your project `styles.css` and adding the following `CSS`.
 
 ```CSS
 html  {
