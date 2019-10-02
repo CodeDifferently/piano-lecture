@@ -10,7 +10,7 @@
 	* Internet access
 	* A text editor or IDE 
 		* Check out this free online editor, [Codepen.io](https://www.codepen.io)
-		* 
+		
 
 
 
@@ -110,7 +110,8 @@ web page is contained by the `<body>` tag.
 
 #### Creating the keys
 We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag
-will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. 
+will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. The `<section>` tag 
+with a class of "wrap", will go inside the `<body>` tag. 
  
 
 
@@ -143,7 +144,7 @@ will give us a place to title your piano. The `<span>` tag will allow us to make
 The `data-key` attribute here is a big part of how you will be connecting your keyboard keys to a sound.
 
 * <a href="https://www.keycode.info">keycode.info </a> will give you data-key values for every letter on the keyboard.
-Look at the third `<div>` tag. The data-key has a value of "65" which connects to the "A" on our keyboard.
+Look at the first `<div>` tag. The data-key has a value of "65" which connects to the "A" on our keyboard.
 Use that as a guide to connect the other data-key values to other keys on the keyboard.
 
 
@@ -161,6 +162,7 @@ html  {
     -webkit-font-smoothing: antialiased;
     text-align: center;
 }
+	
 body {
   background-color: #ff8400;
 }
@@ -199,6 +201,7 @@ h1 {
     box-sizing: border-box;
     z-index: 2;
 }
+	
 ```
 
 Now we have our title and our keys starting to form! You should see all of the letters of the keyboard going down in a row.
@@ -383,9 +386,10 @@ window.addEventListener("keydown", playNote);
 
 
 
-#### Adding "animation" to your buttons
+#### Adding "animation" to your keys
 OK! We now have sound for each key! Let's add some animation to our piano! When a key is pressed on the keyboard,
-the associated piano key will move simultaneously. So first things first, we're going to go right back to the `styles.css` file and add the code below.
+the associated piano key will move simultaneously. So first things first, we're going to go right back to the`styles.css`
+file and add the code below.
 
 
 ```CSS
@@ -409,3 +413,34 @@ the associated piano key will move simultaneously. So first things first, we're 
     opacity: 1;
 }
 ```
+
+Now we have a functioning piano/synthesizer! Let's start thinking about design. We can make changes to the title, the background, 
+the color of the keys, and also the border of a key when it is pressed. To make these changes, let's head to `style.css` 
+to make these changes.
+
+
+#### Changing the title
+Let's first look at making changes to the title. Think about different colors that would like to incorporate. 
+Next lets match the tag in `HTML` with the selector in our `style.css`. We can also change the font.
+
+```HTML
+<body>
+  <section id="wrap">
+      <h1>Name Your Piano</h1>
+    <section id="main">
+```
+
+```CSS
+h1 {
+      color: #fff;
+      font-family: 'Bungee';
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0;
+      
+    }
+```
+In the `style.css` you have the option to alter the type of font, color, size, spacing, and how bold it appears. Adjust each one of them 
+to see the different changes. 
