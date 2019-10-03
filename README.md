@@ -143,9 +143,6 @@ with a class of "wrap", will go inside the `<body>` tag.
   </section>
 </section>
   
-  
-	</body>
-</html>
 
 ```	
 The `data-key` attribute here is a big part of how you will be connecting your keyboard keys to a sound.
