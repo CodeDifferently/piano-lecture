@@ -149,7 +149,8 @@ The `data-key` attribute here is a big part of how you will be connecting your k
 
 * <a href="https://www.keycode.info">keycode.info </a> will give you data-key values for every letter on the keyboard.
 Look at the first `<div>` tag. The data-key has a value of "65" which connects to the "A" on our keyboard.
-Use that as a guide to connect the other data-key values to other keys on the keyboard.
+Use that as a guide to connect the other data-key values to other keys on the keyboard. Drop the `<section>` tags in the `<body>` tag
+for it to appear on the web page. 
 
 
 
