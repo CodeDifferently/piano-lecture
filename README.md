@@ -9,7 +9,7 @@
 	* About 20 minutes
 	* Internet access
 	* A text editor or IDE 
-		* Check out this free online editor, [Codepen.io](https://www.codepen.io)
+		* Check out this free online editor, [Codepen.io](https://codepen.io/codeacct/pen/mddyYPo)
 		
 
 
@@ -86,7 +86,7 @@ function playNote(e) {
 ```
 
 
-### Getting Started
+## Getting Started
 
 
 
