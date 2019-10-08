@@ -448,4 +448,8 @@ h1 {
     }
 ```
 In the `style.css` you have the option to alter the type of font, color, size, spacing, and how bold it appears. Adjust each one of them 
-to see the different changes. 
+to see the different changes. Cool, isn't it?
+
+
+#### Changing the background
+Now that you have the title designed, let's look at the background. 
