@@ -173,8 +173,8 @@ body {
 }
 
 h1 {
-    color: #fff;
-    font-size: 50px;
+    color: ;
+    font-size: ;
     font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
