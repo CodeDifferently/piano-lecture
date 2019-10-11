@@ -52,7 +52,7 @@ html  {
 }
 
 body {
-  background-color: #ff8400;
+  background-color: #eee;
 }
 
 h1 {
