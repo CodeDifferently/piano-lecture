@@ -158,7 +158,8 @@ for it to appear on the web page.
 #### Styling your piano
 You're probably looking at your application saying "That's not a piano!" Dont worry thats what we're getting to next.
 
-You can start by adding a new css file to your project `styles.css` and adding the following `CSS`.
+You can start by adding a new css file to your project `styles.css` and adding the following `CSS`. If you're using CodePen, you will
+not need to create a css file.
 
 ```CSS
 html  {
@@ -169,17 +170,18 @@ html  {
 }
 	
 body {
-  background-color: #ff8400;
+  background-color: #eee;
 }
 
 h1 {
-    color: ;
-    font-size: ;
-    font-weight: 400;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin: 0;
-}
+      color: #fff;
+      font-family: 'Bungee';
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0;
+}	
 .nowplaying {
     font-size: 120px;
     line-height: 1;
@@ -208,11 +210,51 @@ h1 {
 }	
 ```
 
+
+#### Changing the title
+Let's look at making changes to the title. Think about various colors you would like to incorporate into your design. 
+Next lets match the tag in `HTML` with the selector in our `style.css`. We can also change the font size.
+
+```HTML
+<body>
+  <section id="wrap">
+      <h1>Name Your Piano</h1>
+    <section id="main">
+```
+
+```CSS
+h1 {
+      color: #fff;
+      font-family: 'Bungee';
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0;
+      
+    }
+```
+In the `style.css` you have the option to alter the type of font, color, spacing, and how bold it appears. Adjust each one of them 
+to see the different changes. Cool, isn't it?
+
+
+#### Changing the background
+Now that you have the title designed, let's look at the background. Since everything displayed on a webpage must be inside of the 
+`<body>` tag, we will look for the "body" selector in our `style.css`. Here we see a property `background-color` with an hex value of
+`#eee`, which is white. We can either type the word of the color we want or use the hex value. You can use Google to search for the hex 
+value of all colors.
+
+```CSS
+body {
+  background-color:#eee;
+}
+```
 Now we have our title and our keys starting to form! You should see all of the letters of the keyboard going down in a row.
 
 
 
 #### Adding the black and white keys
+
 ```CSS
 .key:not(.sharp) {
     float: left;
@@ -263,45 +305,6 @@ Now we have our title and our keys starting to form! You should see all of the l
 You should now be able to see the black and white keys. We can make changes to the title, the background, and the color of the keys To make these changes, let's head to `style.css` to make these changes.
 
 
-
-#### Changing the title
-Let's first look at making changes to the title. Think about various colors you would like to incorporate into your design. 
-Next lets match the tag in `HTML` with the selector in our `style.css`. We can also change the font size.
-
-```HTML
-<body>
-  <section id="wrap">
-      <h1>Name Your Piano</h1>
-    <section id="main">
-```
-
-```CSS
-h1 {
-      color: #fff;
-      font-family: 'Bungee';
-      font-size: 50px;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin: 0;
-      
-    }
-```
-In the `style.css` you have the option to alter the type of font, color, spacing, and how bold it appears. Adjust each one of them 
-to see the different changes. Cool, isn't it?
-
-
-#### Changing the background
-Now that you have the title designed, let's look at the background. Since everything displayed on a webpage must be inside of the 
-`<body>` tag, we will look for the "body" selector in our `style.css`. Here we see a property `background-color` with an hex value of
-`#eee`, which is white. We can either type the word of the color we want or use the hex value. You can use Google to search for the hex 
-value of all colors.
-
-```CSS
-body {
-  background-color:#eee;
-}
-```
 Get ready, we are about to add sound!!!
 
 
