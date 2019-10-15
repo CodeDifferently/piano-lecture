@@ -301,10 +301,6 @@ Now we have our title and our keys starting to form! You should see all of the l
     left: 87%;    
 }
 ```
-
-You should now be able to see the black and white keys. We can make changes to the title, the background, and the color of the keys To make these changes, let's head to `style.css` to make these changes.
-
-
 Get ready, we are about to add sound!!!
 
 
