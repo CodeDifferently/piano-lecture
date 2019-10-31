@@ -458,6 +458,27 @@ file and add the code below.
 }
 ```
 
+Next we have to add code to our `JavaScript` section or added to our `<script>` tag in `HTML` to have our piano keys return to their original posistion when a key is no longer 
+being pressed. 
+
+```HTML
+<script>
+	function removeTransition(e) {
+  if (e.propertyName !== "transform") return;
+  this.classList.remove("playing");
+}
+
+function hintsOn(e, index) {
+  e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
+}
+
+hints.forEach(hintsOn);
+
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+</script>
+
+```
+	
 And now we have action!!! Want to add a little more pop to your piano? Add the code below to make your title more dynamic. Placement is
 crucial so be sure to put the code in the right place. This first bit of code needs to be placed within the `h1` selector in the CSS. 
 
