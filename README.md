@@ -28,8 +28,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charaset="UTF-8">
-		<title> Piano/Synthesizer </title>
+		<title></title>
 	</head>
 	<body>
  
@@ -46,23 +45,8 @@
 ```CSS
 html  {
 	background: #000;
-	font-family: 'Noto Serif', serif;
-	-webkit-font-smoothing: antialiased;
-	text-align: center;
 }
 
-body {
-  background-color: #eee;
-}
-
-h1 {
-    color: #fff;
-    font-size: 50px;
-    font-weight: 400;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin: 0;
-}
 ```
 
 
@@ -71,18 +55,9 @@ h1 {
 * Lastly, you will use `JavaScript` to make your web page dynamic and create responsive elements.
 * For instance, when creating the piano/synthesizer, we want our keys to have action as the keys are the pressed. 
 
-```JavaScript
-function playNote(e) {
-  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
-    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-
-  if (!key) return;
-
-
-  key.classList.add("playing");
-  audio.currentTime = 0;
-  audio.play();
-}
+```HTML
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 ```
 
 
