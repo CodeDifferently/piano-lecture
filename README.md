@@ -65,9 +65,9 @@ html  {
 
 
 
-#### Creating your html file 
+### Creating your html file 
 We will begin by copying and pasting this into the `HTML` section on CodePen. Everything that will appear on the 
-web page is contained by the `<body>` tag.
+web page is contained by the `<body>` tag. Copy and paste this code in the HTML section of CodePen.
 
 
 ```html 
@@ -83,10 +83,12 @@ web page is contained by the `<body>` tag.
 ```
 
 
-#### Creating the keys
-We are going to create a "containter" using the `<section>` tags to hold our `<div>` tags. The `<h1>` tag
-will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to certain text. The `<section>` tag 
-with a class of "wrap", will go inside the `<body>` tag. 
+### Creating the keys
+We are going to create a "containter" using the `<section>` tags to nest our `<div>` tags. The `<h1>` tag
+will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to that certain text. The `<section>` tag with the attribute class and a value of "wrap", will go inside the `<body>` tag. Everything that is shown on a 
+webpage is nested inside of the `<body>` tag. Copy and paste the code below between the opening and closing tags of the 
+`<body>` tag.
+
  
 
 
@@ -124,13 +126,17 @@ The `data-key` attribute here is a big part of how you will be connecting your k
 
 * <a href="https://www.keycode.info">keycode.info </a> will give you data-key values for every letter on the keyboard.
 Look at the first `<div>` tag. The data-key has a value of "65" which connects to the "A" on our keyboard.
-Use that as a guide to connect the other data-key values to other keys on the keyboard. Drop the `<section>` tags in the `<body>` tag
-for it to appear on the web page. 
+Use that as a guide to connect the other data-key values to other keys on the keyboard. Drop the `<section>` tags in 
+the `<body>` tag for it to appear on the web page. On the website, look for the data-key for the following keys in the order 
+below. Press the key and the data-key code will appear. Place the code between the two double quotations to give the data-key
+attribute a value. 
+```HTML
+W S E D F T G Y H U J K O L P ;
+```
 
 
 
-
-#### Styling your piano
+### Styling your piano
 You're probably looking at your application saying "That's not a piano!" Dont worry thats what we're getting to next.
 
 You can start by adding a new css file to your project `styles.css` and adding the following `CSS`. If you're using CodePen, you will
@@ -186,7 +192,7 @@ h1 {
 ```
 
 
-#### Changing the title
+### Changing the title
 Let's look at making changes to the title. Think about various colors you would like to incorporate into your design. 
 Next lets match the tag in `HTML` with the selector in our `style.css`. We can also change the font size.
 
@@ -213,7 +219,7 @@ In the `style.css` you have the option to alter the type of font, color, spacing
 to see the different changes. Cool, isn't it?
 
 
-#### Changing the background
+### Changing the background
 Now that you have the title designed, let's look at the background. Since everything displayed on a webpage must be inside of the 
 `<body>` tag, we will look for the "body" selector in our `style.css`. Here we see a property `background-color` with an hex value of
 `#eee`, which is white. We can either type the word of the color we want or use the hex value. You can use Google to search for the hex 
@@ -228,7 +234,7 @@ Now we have our title and our keys starting to form! You should see all of the l
 
 
 
-#### Adding the black and white keys
+### Adding the black and white keys
 
 ```CSS
 .key:not(.sharp) {
@@ -280,7 +286,7 @@ Get ready, we are about to add sound!!!
 
 
 
-#### Adding audio to your keys
+### Adding audio to your keys
 
 Next, we are going to want to add an associating audio sound to each key on the piano. Under the last `</div>` tag, 
 we will use the `<audio>` tag to give our keys sound! Below is an example of connecting the sound to the "A" key on our keyboard.
@@ -366,7 +372,7 @@ For instrumental sound effects, use these links. You can click each link to hear
 
 
 
-#### Playing audio on keypress
+### Playing audio on keypress
 
 Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript. 
 
@@ -405,7 +411,7 @@ window.addEventListener("keydown", playNote);
 
 
 
-#### Adding "animation" to your keys
+### Adding "animation" to your keys
 OK! We now have sound for each key! Let's add some animation to our piano! When a key is pressed on the keyboard,
 the associated piano key will move simultaneously. So first things first, we're going to go right back to the`styles.css`
 file and add the code below.
