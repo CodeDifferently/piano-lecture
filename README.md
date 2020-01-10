@@ -229,9 +229,9 @@ title. Cool, isn't it?
 
 
 ### Changing the background
-Now that you have the title designed, let's look at the background. Since everything displayed on a webpage must be inside of
-the `<body>` tag, we will look for the "body" selector in our CSS. You can change to background color using the hex value or 
-typing the color. 
+Now that you have the title designed, let's look at the background. Since all content displayed on a webpage contained inside
+of the `<body>` tag, we will look for the "body" selector in our CSS. You can change to background color using the hex value
+or typing the color. 
 
 ```CSS
 body {
@@ -244,7 +244,7 @@ Now we have our title and our keys starting to form! You should see all of the l
 
 ### Adding the black and white keys
 Copy and paste the code below into the CSS section. Be sure to make sure there is adequate spacing between the ending `}` and 
-the next selector. It is important to have code that is readable. The code below help our keys to form and appear.
+the next selector. It is important to have code that is readable. The code below will allow our keys to appear.
 
 ```CSS
 .key:not(.sharp) {
@@ -300,16 +300,17 @@ Get ready, we are about to add sound!!!
 
 Next, we are going to add an associating audio sound to each key on the piano. We will be using the `<audio>` tag to give our
 keys sound! Below is an example of connecting the sound to the "A" key on our keyboard. Copy the code below and paste it under
-the last closing `<div>` tag.
+the last closing `<div>` tag. Looks like this: `</div>`.
 
 ```html
 <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
 ```
 
-Now let's examine this element. We have an `<audio>` tag with the `data-key` attribute and value. If you notice the value matches the value we have for the key "A". When the key "A" is pressed on the keyboard, this sound will play. Next there is a `src` attribute. This is pointing to the location of the sound.  We are getting even closer hearing the sound!
+Now let's examine this element. We have an `<audio>` tag with the `data-key` attribute and value. If you notice the value
+matches the value we have for the key "A". When the key "A" is pressed on the keyboard, this sound will play. Next there is a
+`src` attribute. This is pointing to the location of the sound on the internet.  We are getting even closer hearing the sound!
 
-Here are links to add sound to your piano. You can choose the traditional piano notes to your keys or add in 
-instrumental sound effects! Click each link to hear the sound.
+Here are links to add sound to your piano. Click each link to hear the sound.
 
 For Piano keys in order from left to right:
 
@@ -351,10 +352,13 @@ For Piano keys in order from left to right:
 
 ### Playing audio on keypress
 
-Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript. 
+Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript. JavaScript will also 
+make our piano keys actionable. 
 
 
-Under your `<audio>` tag we are going to start with a `<script>` tag.
+Under your last `<audio>` tag we are going to start with a `<script>` tag. Copy and paste the code below. Now you may think
+this code will appear on the webpage because it is entered inside the `<body>` tag. It will not. All of the code is nested 
+inside of a `<script>` which tells the broswer
 
 ```HTML 
 <script>
