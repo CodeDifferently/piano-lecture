@@ -61,6 +61,8 @@ html  {
 ```
 
 
+
+
 ## Getting Started
 
 
@@ -127,9 +129,10 @@ The `data-key` attribute here is a big part of how you will be connecting your k
 * <a href="https://www.keycode.info">keycode.info </a> will give you data-key values for every letter on the keyboard.
 Look at the first `<div>` tag. The data-key has a value of "65" which connects to the "A" on our keyboard.
 Use that as a guide to connect the other data-key values to other keys on the keyboard. Drop the `<section>` tags in 
-the `<body>` tag for it to appear on the web page. On the website, look for the data-key for the following keys in the order 
-below. Press the key and the data-key code will appear. Place the code between the two double quotations to give the data-key
-attribute a value. 
+the `<body>` tag for it to appear on the web page. On the website, look for the data-key value for the following keys in the
+order below. Press the key and the data-key value will appear. Place the value between the two double quotations to give the
+data-key attribute a value. 
+	
 ```HTML
 W S E D F T G Y H U J K O L P ;
 ```
@@ -137,10 +140,8 @@ W S E D F T G Y H U J K O L P ;
 
 
 ### Styling your piano
-You're probably looking at your application saying "That's not a piano!" Dont worry thats what we're getting to next.
-
-You can start by adding a new css file to your project `styles.css` and adding the following `CSS`. If you're using CodePen, you will
-not need to create a css file.
+Your screen should show a list of the letters along with the title.  You can start by adding a new css file to your project 
+`styles.css` and adding the following `CSS`. If you're using CodePen, you will not need to create a css file. Just copy and paste the code below in the CSS section.
 
 ```CSS
 html  {
@@ -193,8 +194,10 @@ h1 {
 
 
 ### Changing the title
-Let's look at making changes to the title. Think about various colors you would like to incorporate into your design. 
-Next lets match the tag in `HTML` with the selector in our `style.css`. We can also change the font size.
+Let's look at making changes to the title. First, let's give our piano a name. Pick whatever you like. To change the title, we 
+need to find the heading tag or `<h1>` element. Delete the text inside the opening and closing tags and replace with your
+chosen name. Below is what the code will look like. Replace the words "Name Your Piano" with your title.
+
 
 ```HTML
 <body>
@@ -203,9 +206,12 @@ Next lets match the tag in `HTML` with the selector in our `style.css`. We can a
     <section id="main">
 ```
 
+### Adding style to the title
+Think about various colors you would like to incorporate into your design. We have the ability to change the color, size, font, and more! To make these changes, we need to match up the tag used in HTML for our title with one in CSS. In our HTML document, we used the `<h1>` tag for our title. Next lets match the tag in `HTML` with the tag or selector in the CSS section. 
+
 ```CSS
 h1 {
-      color: #fff;
+      color: #ffffff;
       font-family: 'Bungee';
       font-size: 50px;
       font-weight: 400;
@@ -215,15 +221,17 @@ h1 {
       
     }
 ```
-In the `style.css` you have the option to alter the type of font, color, spacing, and how bold it appears. Adjust each one of them 
-to see the different changes. Cool, isn't it?
+Here we have the selector `<h1>` which has many properties that can be altered. Here we see a property `color` with an
+hex value of `#ffffff`, which is white. We can either type the word of the color we want or use the hex value. You can use
+Google to search for the hex value of all colors. You can also visit <a href="www.coolors.co">coolors.co</a> Be sure not to
+erase the colon before or the semicolon after the value. Adjust each property's value to see the different changes to the 
+title. Cool, isn't it?
 
 
 ### Changing the background
-Now that you have the title designed, let's look at the background. Since everything displayed on a webpage must be inside of the 
-`<body>` tag, we will look for the "body" selector in our `style.css`. Here we see a property `background-color` with an hex value of
-`#eee`, which is white. We can either type the word of the color we want or use the hex value. You can use Google to search for the hex 
-value of all colors.
+Now that you have the title designed, let's look at the background. Since everything displayed on a webpage must be inside of
+the `<body>` tag, we will look for the "body" selector in our CSS. You can change to background color using the hex value or 
+typing the color. 
 
 ```CSS
 body {
@@ -235,6 +243,8 @@ Now we have our title and our keys starting to form! You should see all of the l
 
 
 ### Adding the black and white keys
+Copy and paste the code below into the CSS section. Be sure to make sure there is adequate spacing between the ending `}` and 
+the next selector. It is important to have code that is readable. The code below help our keys to form and appear.
 
 ```CSS
 .key:not(.sharp) {
@@ -288,87 +298,54 @@ Get ready, we are about to add sound!!!
 
 ### Adding audio to your keys
 
-Next, we are going to want to add an associating audio sound to each key on the piano. Under the last `</div>` tag, 
-we will use the `<audio>` tag to give our keys sound! Below is an example of connecting the sound to the "A" key on our keyboard.
+Next, we are going to add an associating audio sound to each key on the piano. We will be using the `<audio>` tag to give our
+keys sound! Below is an example of connecting the sound to the "A" key on our keyboard. Copy the code below and paste it under
+the last closing `<div>` tag.
 
 ```html
 <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
 ```
 
-Notice the same data-key value it matches our first key we created in the list. We are getting even closer hearing the sound!
+Now let's examine this element. We have an `<audio>` tag with the `data-key` attribute and value. If you notice the value matches the value we have for the key "A". When the key "A" is pressed on the keyboard, this sound will play. Next there is a `src` attribute. This is pointing to the location of the sound.  We are getting even closer hearing the sound!
 
 Here are links to add sound to your piano. You can choose the traditional piano notes to your keys or add in 
 instrumental sound effects! Click each link to hear the sound.
 
 For Piano keys in order from left to right:
 
-C = "http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"
+(A)C = "http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"
 
-C# = "http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"
+(W)C# = "http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"
 
-D = "http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"
+(S)D = "http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"
 
-D# = "http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"
+(E)D# = "http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"
 
-E = "http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"
+(D)E = "http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"
 
-F = "http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"
+(F)F = "http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"
 
-F# = "http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"
+(T)F# = "http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"
 
-G = "http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"
+(G)G = "http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"
 
-G# = "http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"
+(Y)G# = "http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"
 
-A = "http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"
+(H)A = "http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"
 
-A# = "http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"
+(U)A# = "http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"
 
-B = "http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"
+(J)B = "http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"
 
-C = "http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"
+(K)C = "http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"
 
-C# = "http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"
+(O)C# = "http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"
 
-D = "http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"
+(L)D = "http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"
 
-D# = "http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"
+(P)D# = "http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"
 
-E = "http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"
-
-
-For instrumental sound effects, use these links. You can click each link to hear the sound.
-
-"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
-
-"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
-
-"https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
-
-"https://res.cloudinary.com/cd0hgkqgk/video/upload/v1538335238/audio/nipon_cymbal_1.mp3"
-
-"https://res.cloudinary.com/cd0hgkqgk/video/upload/v1538335237/audio/nipon_cymbal_2.mp3"
-
-"https://res.cloudinary.com/cd0hgkqgk/video/upload/v1538335238/audio/taiko_2.mp3"
-
-"https://res.cloudinary.com/cd0hgkqgk/video/upload/v1538335237/audio/med_taiko.mp3"
-
-"https://res.cloudinary.com/cd0hgkqgk/video/upload/v1538335238/audio/shime_hi.mp3"
-
-"https://res.cloudinary.com/cd0hgkqgk/video/upload/v1538335238/audio/shime_hi_2.mp3"
-
-"https://s3.us-east-2.amazonaws.com/fcc-projects-jms/Drum+Machine/Conga.m4a"
-
-"https://s3.us-east-2.amazonaws.com/fcc-projects-jms/Drum+Machine/Crash.m4a "
-
-"https://s3.us-east-2.amazonaws.com/fcc-projects-jms/Drum+Machine/Cymbal+Hit.m4a"
-
-"https://s3.us-east-2.amazonaws.com/fcc-projects-jms/Drum+Machine/Scratch.m4a"
-
-"https://s3-us-west-2.amazonaws.com/s.cdpn.io/377560/PAD1.wav"
-
-"https://s3-us-west-2.amazonaws.com/s.cdpn.io/377560/HORN1.wav"
-
+(;)E = "http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"
 
 
 
