@@ -131,11 +131,14 @@ Look at the first `<div>` tag. The data-key has a value of "65" which connects t
 Use that as a guide to connect the other data-key values to other keys on the keyboard. Drop the `<section>` tags in 
 the `<body>` tag for it to appear on the web page. On the website, look for the data-key value for the following keys in the
 order below. Press the key and the data-key value will appear. Place the value between the two double quotations to give the
-data-key attribute a value. 
+data-key attribute a value.  
 	
 ```HTML
 W S E D F T G Y H U J K O L P ;
 ```
+
+After adding the data-key value, nest the keyboard letter inside of the `<span class="hints"> </span>`. Your audio tag should
+look like this: `<span class="hints"> W </span>`.
 
 
 
