@@ -299,20 +299,21 @@ Get ready, we are about to add sound!!!
 ### Adding audio to your keys
 
 Next, we are going to add an associating audio sound to each key on the piano. We will be using the `<audio>` tag to give our
-keys sound! Below is an example of connecting the sound to the "A" key on our keyboard. Copy the code below and paste it under
+keys sound. Below is an example of connecting the sound to the "A" key on our keyboard. Copy the code below and paste it under
 the last closing `<div>` tag. Looks like this: `</div>`.
 
 ```html
 <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
 ```
 
-Now let's examine this element. We have an `<audio>` tag with the `data-key` attribute and value. If you notice the value
+Now let's examine this element. We have an `<audio>` tag with a `data-key` attribute and value. If you notice the value
 matches the value we have for the key "A". When the key "A" is pressed on the keyboard, this sound will play. Next there is a
-`src` attribute. This is pointing to the location of the sound on the internet.  We are getting even closer hearing the sound!
+`src` attribute. This is pointing to the location of the sound on the internet.  We are getting even closer to hearing sound!
 
 Here are links to add sound to your piano. Click each link to hear the sound.
 
 For Piano keys in order from left to right:
+
 
 (A)C = "http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"
 
@@ -349,19 +350,18 @@ For Piano keys in order from left to right:
 (;)E = "http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"
 
 
+* Note: To save time and avoid having to type the code over and over, copy and paste the `<audio>` tag for the "A" key. 
+Then replace the `data-key` value with the next key's value. Next, copy the associated sound link and paste it over the 
+current one. Be sure the link is inside of the double quotations. 
+
 
 ### Playing audio on keypress
 
-Now in order for you to be able to hear anything when that key is pressed, we need to add JavaScript. JavaScript will also 
-make our piano keys actionable. 
+Now in order for you to be able to hear anything when the key is pressed, we need to add JavaScript. JavaScript will also 
+make our piano keys actionable. In the JS section, copy and paste the code below.
 
+```Javascript 
 
-Under your last `<audio>` tag we are going to start with a `<script>` tag. Copy and paste the code below. Now you may think
-this code will appear on the webpage because it is entered inside the `<body>` tag. It will not. All of the code is nested 
-inside of a `<script>` which tells the broswer
-
-```HTML 
-<script>
 const keys = document.querySelectorAll(".key"),
   note = document.querySelector(".nowplaying"),
   hints = document.querySelectorAll(".hints");
@@ -380,23 +380,21 @@ function playNote(e) {
   audio.play();
 }
 window.addEventListener("keydown", playNote);
-</script>
+
 ```
 
 * In short what this does is :
-	* lets the window listen for the even `keydown`
-	* passes associated `keydown` value from event to the `playSound` function thats called.
-	* checks if theres an audio and key with the same data-key value as the keypress that was passed along
-	* adds class `active` to the key so it can undergo CSS changes
+	* lets the window listen for the event `keydown`
+	* passes associated `keydown` value from event to the `playSound` function thats called
+	* checks if there's an audio and key with the same data-key value as the keypress that was passed along
+	* adds class `active` to the key so it can undergo the CSS changes
 
 
 
 
 ### Adding "animation" to your keys
-OK! We now have sound for each key! Let's add some animation to our piano! When a key is pressed on the keyboard,
-the associated piano key will move simultaneously. So first things first, we're going to go right back to the`styles.css`
-file and add the code below.
-
+We now have sound for each key! Let's add some animation to our piano! When a key is pressed on the keyboard,
+the associated piano key will move simultaneously. So first things first. Copy and paste below into the CSS section.
 
 ```CSS
 .playing {
@@ -420,12 +418,12 @@ file and add the code below.
 }
 ```
 
-Next we have to add code to our `JavaScript` section or added to our `<script>` tag in `HTML` to have our piano keys return to their original posistion when a key is no longer 
-being pressed. 
+Next to have our piano keys return to their original posistion when a key is no longer being pressed, we add the code below. 
+Copy and paste the code below under the last statment in the JS section. A statement in JavaScript ends with a semi-colon.
 
-```HTML
-<script>
-	function removeTransition(e) {
+```Javascript
+
+function removeTransition(e) {
   if (e.propertyName !== "transform") return;
   this.classList.remove("playing");
 }
@@ -437,23 +435,23 @@ function hintsOn(e, index) {
 hints.forEach(hintsOn);
 
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
-</script>
 
 ```
 	
-And now we have action!!! Want to add a little more pop to your piano? Add the code below to make your title more dynamic. Placement is
-crucial so be sure to put the code in the right place. This first bit of code needs to be placed within the `h1` selector in the CSS. 
+And now we have action!!! Want to add a little more pop to your piano? Add the code below to make your title more dynamic.
+Placement is crucial so be sure to put the code in the right place. This first bit of code needs to be placed within the `h1`
+selector in the CSS. 
 
 ```CSS
 -webkit-animation: mymove 5s infinite; 
       animation: mymove 5s infinite;
 ```
 
-`h1` should now look like this:
+`h1` should now look like the code below:
 
 ```CSS
  h1 {
-      color: #fff;
+      color: blue;
       font-size: 50px;
       font-weight: 400;
       letter-spacing: 0.18em;
@@ -464,7 +462,8 @@ crucial so be sure to put the code in the right place. This first bit of code ne
     }
 ```   
 
-Next we will add more code to ensure it works properly. Under the `h1` selector, copy and paste the code below.
+Next we will add more code to ensure it works properly. Under the `h1` selector's curly brace `}`, copy and paste the code
+below.
 
 ```CSS
  @-webkit-keyframes mymove {
