@@ -137,8 +137,8 @@ data-key attribute a value.
 W S E D F T G Y H U J K O L P ;
 ```
 
-After adding the data-key value, nest the keyboard letter inside of the `<span class="hints"> </span>`. Your audio tag should
-look like this: `<span class="hints"> W </span>`.
+After adding the data-key value, nest the keyboard letter inside of the `<span class="hints"> </span>`. Your next tag should
+look like this: `<div data-key="87" class="key sharp"> <span class="hints">W</span> </div>`
 
 
 
