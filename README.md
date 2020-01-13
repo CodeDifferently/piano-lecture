@@ -86,7 +86,7 @@ web page is contained by the `<body>` tag. Copy and paste this code in the HTML 
 
 
 ### Creating the keys
-We are going to create a "containter" using the `<section>` tags to nest our `<div>` tags. The `<h1>` tag
+We are going to create a "container" using the `<section>` tags to nest our `<div>` tags. The `<h1>` tag
 will give us a place to title your piano. The `<span>` tag will allow us to make specific changes to that certain text. The `<section>` tag with the attribute class and a value of "wrap", will go inside the `<body>` tag. Everything that is shown on a 
 webpage is nested inside of the `<body>` tag. Copy and paste the code below between the opening and closing tags of the 
 `<body>` tag.
