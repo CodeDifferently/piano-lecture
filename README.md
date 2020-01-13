@@ -148,18 +148,18 @@ Your screen should show a list of the letters along with the title. Copy and pas
 
 ```CSS
 html  {
-    background: #000;
+    background: white;
     font-family: 'Noto Serif', serif;
     -webkit-font-smoothing: antialiased;
     text-align: center;
 }
 	
 body {
-  background-color: #eee;
+  background-color: white;
 }
 
 h1 {
-      color: #fff;
+      color: white;
       font-family: 'Bungee';
       font-size: 50px;
       font-weight: 400;
@@ -214,7 +214,7 @@ Think about various colors you would like to incorporate into your design. We ha
 
 ```CSS
 h1 {
-      color: #ffffff;
+      color: white;
       font-family: 'Bungee';
       font-size: 50px;
       font-weight: 400;
@@ -224,21 +224,20 @@ h1 {
       
     }
 ```
-Here we have the selector `<h1>` which has many properties that can be altered. Here we see a property `color` with an
-hex value of `#ffffff`, which is white. We can either type the word of the color we want or use the hex value. You can use
-Google to search for the hex value of all colors. You can also visit <a href="www.coolors.co">coolors.co</a> Be sure not to
-erase the colon before or the semicolon after the value. Adjust each property's value to see the different changes to the 
-title. Cool, isn't it?
+Here we have the selector `<h1>` which has many properties that can be altered. Here we see the property `color` with a value of white. We can either type the word of the color we want or use the hex value. The hex value of white looks like this: 
+#ffffff. You can use Google to search for the hex value of all colors. You can also visit 
+<a href="https://coolors.co">coolors.co</a> Be sure not to erase the colon before or the semicolon after the value. Adjust
+each property's value to see the different changes to the title. Cool, isn't it?
 
 
 ### Changing the background
-Now that you have the title designed, let's look at the background. Since all content displayed on a webpage contained inside
+Now that you have the title designed, let's look at the background. Since all content displayed on a webpage is nested inside
 of the `<body>` tag, we will look for the "body" selector in our CSS. You can change to background color using the hex value
 or typing the color. 
 
 ```CSS
 body {
-  background-color:#eee;
+  background-color: white;
 }
 ```
 Now we have our title and our keys starting to form! You should see all of the letters of the keyboard going down in a row.
