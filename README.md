@@ -1,8 +1,8 @@
-# Building a Piano / Synthesizer 
+# Building a Piano  
 
 
 ## Project Details
-* **Objective** - To build a piano / synthesizer with sound and actionable keys
+* **Objective** - To build a piano with sound and actionable keys
 * **Purpose** - To help students establish familiarity with `HTML` (Hypertext Markup Langauge), `CSS` (Cascading Style Sheets), `JS` (JavaScript).
 * **Description** - This guide will walk you through the process to create a piano/sythesizer with sound and actionable keys.
 * **Requirements:**
