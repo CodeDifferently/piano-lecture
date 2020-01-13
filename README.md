@@ -9,7 +9,7 @@
 	* About 20 minutes
 	* Internet access
 	* A text editor or IDE 
-		* Check out this free online editor, [Codepen.io](https://codepen.io/codeacct/pen/mddyYPo)
+		* Check out this free online editor, [Codepen.io](https://codepen.io/)
 		
 
 
@@ -21,7 +21,7 @@
 
 ## Project Overview
 ### Using HTML
-* First, using `HTML` will allow you to build a document that can be displayed on a web broswer.
+* First, using `HTML` will allow you to build a document that can be displayed on a web browser.
 * Below is an example of the structure for creating an HTML document.
 
 ```HTML 
@@ -144,8 +144,7 @@ Your next tag should look like this: `<div data-key="87" class="key sharp"> <spa
 
 
 ### Styling your piano
-Your screen should show a list of the letters along with the title.  You can start by adding a new css file to your project 
-`styles.css` and adding the following `CSS`. If you're using CodePen, you will not need to create a css file. Just copy and paste the code below in the CSS section.
+Your screen should show a list of the letters along with the title. Copy and paste the code below in the CSS section.
 
 ```CSS
 html  {
