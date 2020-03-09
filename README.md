@@ -78,6 +78,7 @@ web page is contained by the `<body>` tag. Copy and paste this code in the HTML 
 	<head>
 		<meta charaset="UTF-8">
 		<title> Piano/Synthesizer </title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 	</body>
